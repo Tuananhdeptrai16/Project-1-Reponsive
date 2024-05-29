@@ -10,41 +10,73 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
-<body>
-    <main >
-        <!-- Header  -->
-        <header class="header">
-                <div class="content">
-                    <nav class="navbar">
-                        <!-- logo -->
-                        <img src="./assets/img/logo.svg" alt="">
-                        <!-- navigation -->
-                        <ul>
-                            <li><a href="#!">Home</a></li>
-                            <li><a href="#!">Features</a></li>
-                            <li><a href="#!">Service</a></li>
-                            <li><a href="#!">Resources</a></li>
-                            <li><a href="#!">Contact</a></li>
-                        </ul>
+<body style="height: 5000px;">
+    <header class="mobile-header">
+        <input  hidden type="checkbox" id="menu-checkbox" class="menu-checkbox">
+        <!-- over lay -->
+        <label for="menu-checkbox" class="menu-overlay">
 
-                        <!-- action -->
-                        <div class="actions">
-                            <a href="#!" class="action-link">Sign in</a>
-                            <a href="#!" class="btn action-btn">Sign up</a>
-                        </div>
-                    </nav>
-                    <div class="hero">
-                        <div class="info">
-                            <p class="sub-title">Welcome to Besnik Agency</p>
-                            <h1 class="title">Discover a place you'll love to live.</h1>
-                            <p class="des">get the best real estate deals first,before they hit the mass market! HOT FORECLOSURE DEALS with one simple search.</p>
-                            <a href="" class="btn hero-cta">More About Us</a>
-                        </div>
-                        <img src="./assets/img/house illustration.svg" alt="Discover a place you'll love to live." class="hero-img">
+        </label for="menu-checkbox">
+        <!-- menu content -->
+        <div class="menu-drawer">
+           <a href="">
+            <img src="./assets/img/logo.svg" alt="" >
+            
+           </a>
+           <ul id="mobile-nav">
+            <li><a href="#!">Home</a></li>
+            <li><a href="#!">Features</a></li>
+            <li><a href="#!">Service</a></li>
+            <li><a href="#!">Resources</a></li>
+            <li><a href="#!">Contact</a></li>
+            <li class="show-on-mobile separate"><a href="#!">Sign in</a></li>
+            <li class="show-on-mobile"><a href="#!">Sign up</a></li>
+        </ul>
+
+        </div>
+    </header>
+    <header class="header">
+            <div class="content">
+                <nav class="navbar">
+                    <!-- tablet + mobile  -->
+                    <label for="menu-checkbox" class="toogle-menu">
+                        <svg fill="currentColor" class="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                    </label>
+                    <!-- logo -->
+                    <img src="./assets/img/logo.svg" alt="" class="logo ">
+                    <!-- navigation -->
+                    <ul id="pc-nav">
+                       
+                    </ul>
+                    <script>
+                        const pcNav =document.querySelector("#pc-nav")
+                        const mbNav =document.querySelector("#mobile-nav")
+                        // copy form pc nav va mobile nav
+                        pcNav.innerHTML=mbNav.innerHTML
+
+                    </script>
+
+                    <!-- action -->
+                    <div class="actions">
+                        <a href="#!" class="action-link">Sign in</a>
+                        <a href="#!" class="btn action-btn">Sign up</a>
                     </div>
+                </nav>
+                <div class="hero">
+                    <div class="info">
+                        <p class="sub-title">Welcome to Besnik Agency</p>
+                        <h1 class="title">Discover a place you'll love to live.</h1>
+                        <p class="des">get the best real estate deals first,before they hit the mass market! HOT FORECLOSURE DEALS with one simple search.</p>
+                        <a href="" class="btn hero-cta">More About Us</a>
+                    </div>
+                    <img src="./assets/img/house illustration.svg" alt="Discover a place you'll love to live." class="hero-img">
                 </div>
-        </header>
+            </div>
+    </header>
+        <main >
+            <!-- Header  -->
         <!-- Client -->
         <div class="client">
             <div class="content">
@@ -303,9 +335,9 @@
             </div>
         </div>
         <!-- footer -->
-        <footer class="footer">
+        <footer class="footer"  >
             <div class="content">
-                <div class="row row-top">
+                <div class=" row-top">
                     <div class="column">
                         <h3 class="heading">Product</h3>
                         <ul class="list">
@@ -361,7 +393,7 @@
                     </div>
                     <div class="column">
                         <h3 class="heading">Get in touch</h3>
-                        <p class="desc">You’ll find your next home, in any style you prefer.</p>
+                        <p class="column__desc">You’ll find your next home, in any style you prefer.</p>
                         <div class="social">
                             <a href="" class="social-link">
                                 <img src="./assets/img/facebook.svg" alt="facebook">
@@ -376,7 +408,6 @@
                     </div>
                 </div>
                 <div class="row row-down">
-                    <img src="./assets/img/logo.svg" alt="Besnik" class="logo">
                     <p class="copyright">Copyright 2020.com, All rights reserved.</p>
                 </div>
             </div>

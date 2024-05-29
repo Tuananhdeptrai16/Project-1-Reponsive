@@ -1,0 +1,219 @@
+/* PC */
+@media screen and (min-width:992px) {
+    .mobile-header {display: none;}
+    .show-on-mobile {
+        display: none;
+    }
+}
+/* Tablet và mobile */
+@media screen and (max-width:991px) {
+    .separate {
+        border-top: 1px solid #ececec;
+    }
+    .navbar ul {
+        display: none;
+    }
+    .navbar {
+        position: relative;
+    }
+    .logo  {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 30%);
+    }
+    .toogle-menu svg{
+        width: 24px;
+        color: #666;
+    }
+    .menu-overlay {
+        z-index: 1;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease;
+    }
+    .menu-drawer {
+        position: fixed;
+        inset: 0 40% 0 0;
+        background: #fff;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: 0.5s ease;
+        padding: 20px;
+
+    }
+    .menu-checkbox:checked ~ .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu-checkbox:checked ~ .menu-drawer {
+        transform: translateX(0);
+    }
+    .menu-drawer ul {
+        margin-top: 32px;
+    }
+    .menu-drawer ul a {
+        color: #333;
+        display: block;
+        padding: 14px 0;
+        font-weight: 500;
+    }
+    .hero-img {
+        display: none;
+    }
+    .hero .info {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .client .images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .featured {
+        padding: 20px;
+    }
+    .featured .list {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .stats .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .stats-trend  {
+        top: -40px;
+        left: -80px;
+    
+    }
+    .stats .infor {
+        display:flex;
+        align-items:center;
+        flex-direction: column;
+        justify-content:center;
+        width: 100%;
+        padding: 0;
+        margin-top: 80px;
+    }
+    .stats .infor .sub-title::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .stats .infor .sub-title {
+        text-align: center;
+        width: 80%;
+    }
+    .stats .infor .desc {
+        margin: 0;
+        text-align: justify;
+        width: 60%;
+    }
+    .footer .row-top {
+        padding: 0 30px;
+        grid-template-columns: 1fr 1fr ;
+        row-gap: 40px;
+    }
+    .footer .copyright {
+        margin: 0 auto;
+    }
+
+}
+/* tablet  */
+@media screen and (min-width:768px) and (max-width:991px) {
+    .show-on-mobile {
+        display: none;
+    }
+   
+}
+/* moblie  */
+@media screen and (max-width:767px){
+    .menu-drawer {
+        inset: 0 20% 0 0;
+        padding:40px ;
+    }
+    .navbar .actions {
+        display: none;
+    }
+    .hero .title {
+        margin-top: 30px;
+        width: 106%;
+        font-size: 2.3rem;
+        line-height: 4.6rem;
+    }
+    .hero .sub-title {
+        font-size: 1.2rem;
+    }
+    .hero .des {
+        font-size: 1.1rem;
+        line-height: 2rem;
+    }
+    .hero .hero-cta {
+        scale: 0.8;
+    }
+    .client .row {
+        font-size: 0.8rem;
+    }
+    .client .images {
+        margin-top: 30px;
+        align-items: center;
+    }
+    .list-guide {
+        grid-template-columns: 1fr;
+    }
+    .featured .list {
+        grid-template-columns: 1fr ;
+        gap: 40px;
+
+    }
+    .stats .img-block .img {
+        scale: 0.6;
+        margin-left: -40px;
+
+    }
+    .stats-trend {
+        scale: 0.6;
+        top: -20px;
+        left: -30px;
+
+    }
+    .stats .row {
+        align-items: start;
+    }
+    .featured .sub-title {
+        font-size: 2.3rem;
+    }
+    .featured .row {
+        font-size: 15px;
+    }
+    .featured .link {
+        margin-top: 30px;
+        font-size: 1.3rem;
+    }
+    .label {
+        font-size: 10px;
+    }
+    .stats .infor .sub-title {
+        font-size: 2.3rem;
+    }
+    .stats .infor .desc {
+        letter-spacing: 1px;
+        width: 300px;
+    }
+    .stats .row .qty-item {
+        margin-left: 30px;
+    }
+    .Subscription .body {
+        scale: 0.5;
+        margin-left: -90px;
+        }
+    .footer .row-top {
+        padding: 0;
+        column-gap: 50px;
+    }
+    .column__desc {
+        width: 163px;
+    }
+}
